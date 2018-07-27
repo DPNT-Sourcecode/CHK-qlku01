@@ -74,7 +74,16 @@ def checkout(skus):
 
     for products in product_count:
 
-        print(product_count[products])
+        if product_count["A"][0] >= 3:
+
+            new_price = 0
+
+            if product_count["A"][0] // 5 > 0:
+
+               new_price = 200 * (product_count["A"][0] // 5)
+
+            
+
 
     return price
 
