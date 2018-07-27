@@ -61,14 +61,19 @@ def checkout(skus):
 
                 price = price - 15
                 total_b = total_b - 1
+                b_count = b_count - 1
 
             else:
 
                 price = price - 30
                 total_b = total_b - 1
+                b_count = b_count - 1
 
             e_count = e_count - 2
 
 
 
     return price
+
+
+print(checkout("EEEEBB"))
