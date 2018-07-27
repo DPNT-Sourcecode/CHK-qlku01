@@ -6,6 +6,7 @@ def checkout(skus):
     a_count = 0
     e_count = 0
     total_a = 0
+    total_b = 0
     b_count = 0
     price = 0
 
@@ -31,6 +32,7 @@ def checkout(skus):
         if product == "B":
 
             b_count = b_count + 1
+            total_b = total_b + 1
 
         if product == "E":
 
@@ -53,7 +55,7 @@ def checkout(skus):
             price = price - 15
             b_count = 0
 
-        if e_count >= 2 and product == "B":
+        if e_count >= 2:
 
             price = price - 30
 
