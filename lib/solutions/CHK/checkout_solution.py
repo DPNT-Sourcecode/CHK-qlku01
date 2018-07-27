@@ -55,9 +55,17 @@ def checkout(skus):
             price = price - 15
             b_count = 0
 
-        if e_count >= 2:
+        if e_count >= 2 and total_b > 0:
 
-            price = price - 30
+            if total_b % 2 == 0:
+
+                price = price - 15
+                total_b = total_b - 1
+
+            else:
+
+                price = price - 30
+                total_b = total_b - 1
 
             e_count = e_count - 2
 
