@@ -5,6 +5,7 @@ def checkout(skus):
 
     a_count = 0
     e_count = 0
+    f_count = 0
     total_a = 0
     total_b = 0
     b_count = 0
@@ -17,6 +18,7 @@ def checkout(skus):
     products["C"] = 20
     products["D"] = 15
     products["E"] = 40
+    products["F"] = 10
 
     for product in skus:
 
@@ -37,6 +39,10 @@ def checkout(skus):
         if product == "E":
 
             e_count = e_count + 1
+
+        if product == "F":
+
+            f_count = f_count + 1
 
 
         price = price + products[product]
@@ -71,9 +77,14 @@ def checkout(skus):
 
             e_count = e_count - 2
 
+        if f_count == 3:
+
+            price = price - 10
+            f_count = 0
+
 
 
     return price
 
 
-print(checkout("CCADDEEBBA"))
+print(checkout("FFFFFFFF"))
