@@ -35,32 +35,32 @@ def checkout(skus):
     products["Y"] = 10
     products["Z"] = 50
 
-    product_count["A"] = 0
-    product_count["B"] = 0
-    product_count["C"] = 0
-    product_count["D"] = 0
-    product_count["E"] = 0
-    product_count["F"] = 0
-    product_count["G"] = 0
-    product_count["H"] = 0
-    product_count["I"] = 0
-    product_count["J"] = 0
-    product_count["K"] = 0
-    product_count["L"] = 0
-    product_count["M"] = 0
-    product_count["N"] = 0
-    product_count["O"] = 0
-    product_count["P"] = 0
-    product_count["Q"] = 0
-    product_count["R"] = 0
-    product_count["S"] = 0
-    product_count["T"] = 0
-    product_count["U"] = 0
-    product_count["V"] = 0
-    product_count["W"] = 0
-    product_count["X"] = 0
-    product_count["Y"] = 0
-    product_count["Z"] = 0
+    product_count["A"] = (0,0)
+    product_count["B"] = (0,0)
+    product_count["C"] = (0,0)
+    product_count["D"] = (0,0)
+    product_count["E"] = (0,0)
+    product_count["F"] = (0,0)
+    product_count["G"] = (0,0)
+    product_count["H"] = (0,0)
+    product_count["I"] = (0,0)
+    product_count["J"] = (0,0)
+    product_count["K"] = (0,0)
+    product_count["L"] = (0,0)
+    product_count["M"] = (0,0)
+    product_count["N"] = (0,0)
+    product_count["O"] = (0,0)
+    product_count["P"] = (0,0)
+    product_count["Q"] = (0,0)
+    product_count["R"] = (0,0)
+    product_count["S"] = (0,0)
+    product_count["T"] = (0,0)
+    product_count["U"] = (0,0)
+    product_count["V"] = (0,0)
+    product_count["W"] = (0,0)
+    product_count["X"] = (0,0)
+    product_count["Y"] = (0,0)
+    product_count["Z"] = (0,0)
 
     for product in skus:
 
@@ -69,11 +69,12 @@ def checkout(skus):
             return -1
 
 
-        product_count[product] = product_count[product] + 1
+        product_count[product] = (product_count[product][0] + 1, product_count[product][1] + products[product])
 
-        if product_count[product] >= 2:
 
-            pass
+    for products in product_count:
+
+        print(product_count[products])
 
     return price
 
@@ -137,4 +138,4 @@ def checkout(skus):
 
 
 
-#print(checkout("BBFFF"))
+print(checkout("AAAAAABCDEFGH"))
