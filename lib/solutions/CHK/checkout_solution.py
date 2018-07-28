@@ -22,7 +22,7 @@ def checkout(skus):
     products["H"] = 10
     products["I"] = 35
     products["J"] = 60
-    products["K"] = 80
+    products["K"] = 70
     products["L"] = 90
     products["M"] = 15
     products["N"] = 40
@@ -30,14 +30,14 @@ def checkout(skus):
     products["P"] = 50
     products["Q"] = 30
     products["R"] = 50
-    products["S"] = 30
+    products["S"] = 20
     products["T"] = 20
     products["U"] = 40
     products["V"] = 50
     products["W"] = 20
-    products["X"] = 90
-    products["Y"] = 10
-    products["Z"] = 50
+    products["X"] = 17
+    products["Y"] = 20
+    products["Z"] = 21
 
     product_count["A"] = (0,0)
     product_count["B"] = (0,0)
@@ -399,4 +399,4 @@ def checkout(skus):
 
 
 
-print(checkout("STXXYZZ"))
+print(checkout(""))
