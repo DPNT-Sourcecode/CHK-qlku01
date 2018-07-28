@@ -92,6 +92,16 @@ def checkout(skus):
 
             price = price + product_count["E"][1]
 
+        if prods == "F":
+
+            total = product_count["F"][0]
+
+            if total // 3 > 0:
+
+                product_count["F"] = ((product_count["F"][0] - (total//3)), (product_count["F"][0] - (total//3)) * products["F"])
+
+            price = price + product_count["F"][1]
+
 
     for prods in product_count:
 
@@ -148,6 +158,33 @@ def checkout(skus):
             product_count["B"] = (product_count["B"][0], new_price)
 
             price = price + product_count["B"][1]
+
+        if prods == "H":
+
+            new_price = 0
+
+            total = product_count["H"][0]
+
+            if total // 10 > 0:
+
+                print(total)
+                new_price = new_price + 80 * (total // 10)
+                total = total - (10*(total//10))
+                print(total)
+
+            if total // 5 > 0:
+
+                new_price = new_price + 45 * (total//5)
+                total = total - (5*(total//5))
+
+            if total > 0:
+
+                new_price = new_price + (total * products["H"])
+
+
+            product_count["H"] = (product_count["H"][0], new_price)
+
+            price = price + product_count["H"][1]
 
 
     return price
@@ -212,4 +249,4 @@ def checkout(skus):
 
 
 
-print(checkout("BBEEEE"))
+print(checkout("HHHHH"))
