@@ -79,9 +79,16 @@ def checkout(skus):
 
     while pairs_found is False:
 
-        for n in range (0,3):
+        t = 3
+        n = 0
 
-            n = 0
+        while n < 3:
+
+            if found is True:
+
+                n = 0
+
+                found = False
 
             for j in range(2,5-n):
 
@@ -98,6 +105,8 @@ def checkout(skus):
                     print("Pair found")
 
                     found = True
+
+            n = n + 1
 
 
 
@@ -404,4 +413,4 @@ def checkout(skus):
 
 
 
-print(checkout("XTZXTZ"))
+print(checkout(""))
