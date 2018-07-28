@@ -82,27 +82,47 @@ def checkout(skus):
 
             total = product_count["A"][0]
 
-
-
             if total // 5 > 0:
 
                 new_price = new_price + 200 * (total//5)
-                total = total - (5*total//5)
+                total = total - (5*(total//5))
 
 
             if total // 3 > 0:
 
                 print(total)
                 new_price = new_price + 130 * (total // 3)
-                total = total - (3*total//3)
+                total = total - (3*(total//3))
                 print(total)
 
             if total > 0:
 
-                new_price = new_price + (total * 50)
+                new_price = new_price + (total * products["A"])
 
 
             product_count["A"] = (product_count["A"][0], new_price)
+
+            price = price + product_count["A"][1]
+
+        if products == "B":
+
+            new_price = 0
+
+            total = product_count["B"][0]
+
+            if total // 2 > 0:
+
+                print(total)
+                new_price = new_price + 45 * (total // 2)
+                total = total - (2*(total//2))
+                print(total)
+
+            if total > 0:
+
+                new_price = new_price + (total * products["B"])
+
+
+            product_count["B"] = (product_count["B"][0], new_price)
 
             price = price + product_count["A"][1]
 
@@ -169,4 +189,4 @@ def checkout(skus):
 
 
 
-print(checkout("AAAA"))
+print(checkout("A"))
