@@ -399,4 +399,4 @@ def checkout(skus):
 
 
 
-print(checkout("VVV"))
+print(checkout("SSS"))
