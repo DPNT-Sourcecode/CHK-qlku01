@@ -92,6 +92,8 @@ def checkout(skus):
 
                     n = 0
 
+                    price = price + 45
+
                     print("Pair found")
 
         pairs_found = True
@@ -397,4 +399,4 @@ def checkout(skus):
 
 
 
-print(checkout("STX"))
+print(checkout("STXXYZZ"))
