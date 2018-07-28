@@ -454,4 +454,4 @@ def checkout(skus):
 
 
 
-print(checkout("XXXT"))
+print(checkout("ZZZS"))
