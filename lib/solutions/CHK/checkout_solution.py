@@ -72,11 +72,11 @@ def checkout(skus):
         product_count[product] = (product_count[product][0] + 1, product_count[product][1] + products[product])
 
 
-    for products in product_count:
+    for prods in product_count:
 
         #print(products)
 
-        if products == "A":
+        if prods == "A":
 
             new_price = 0
 
@@ -104,7 +104,7 @@ def checkout(skus):
 
             price = price + product_count["A"][1]
 
-        if products == "B":
+        if prods == "B":
 
             new_price = 0
 
@@ -189,4 +189,4 @@ def checkout(skus):
 
 
 
-print(checkout("A"))
+print(checkout("BBBBBBBBAAA"))
