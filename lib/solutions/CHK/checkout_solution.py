@@ -86,6 +86,10 @@ def checkout(skus):
 
                 if product_count[group[n]][0] > 0 and product_count[group[n+1]][0] > 0 and product_count[group[n+j]][0] > 0:
 
+                    product_count[group[n]] = (product_count[group[n]][0] - 1, (product_count[group[n]][0] - 1) * products[group[n]])
+                    product_count[group[n+1]] = (product_count[group[n+1]][0] - 1, (product_count[group[n+1]][0] - 1) * products[group[n+1]])
+                    product_count[group[n+j]] = (product_count[group[n+j]][0] - 1, (product_count[group[n+j]][0] - 1) * products[group[n+j]])
+
                     n = 0
 
                     print("Pair found")
@@ -393,4 +397,4 @@ def checkout(skus):
 
 
 
-print(checkout("XYZ"))
+print(checkout("STX"))
