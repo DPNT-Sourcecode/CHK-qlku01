@@ -131,12 +131,12 @@ def checkout(skus):
                 if n == j:
                     pass
 
-                elif product_count[group[n]][0] >= 2 and product_count[group[n+j]][0] > 0:
+                elif product_count[group[n]][0] >= 2 and product_count[group[j]][0] > 0:
 
                     product_count[group[n]] = (
                     product_count[group[n]][0] - 2, (product_count[group[n]][0] - 2) * products[group[n]])
-                    product_count[group[n + j]] = (
-                    product_count[group[n + j]][0] - 1, (product_count[group[n + j]][0] - 1) * products[group[n + j]])
+                    product_count[group[j]] = (
+                    product_count[group[j]][0] - 1, (product_count[group[j]][0] - 1) * products[group[j]])
 
                     price = price + 45
 
@@ -145,6 +145,14 @@ def checkout(skus):
             n = n + 1
 
         pairs_found = True
+
+
+    for n in range(0,5):
+
+        if product_count[group[n]] >= 3:
+            product_count[group[n]] = (product_count[group[n]][0] - 3, (product_count[group[n]][0] - 3) * products[group[n]])
+
+            price = price + 45
 
 
 
@@ -446,4 +454,4 @@ def checkout(skus):
 
 
 
-print(checkout("ZZS"))
+print(checkout(""))
