@@ -88,10 +88,9 @@ def checkout(skus):
 
                new_price = 200 * division
 
-               if product_count["A"][0] % 5 == 3:
+               if product_count["A"][0] % 5 // 3 > 0:
 
-                   #new_price = new_price + 130
-                   pass
+                   new_price = new_price + 130
 
                else:
 
