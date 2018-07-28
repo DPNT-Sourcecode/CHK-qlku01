@@ -90,7 +90,6 @@ def checkout(skus):
 
                 product_count["B"] = (total_b, product_count["B"][1])
 
-            price = price + product_count["E"][1]
 
         if prods == "F":
 
@@ -134,7 +133,6 @@ def checkout(skus):
 
                 product_count["Q"] = (total_b, product_count["Q"][1])
 
-            price = price + product_count["R"][1]
 
         if prods == "U":
 
@@ -372,4 +370,4 @@ def checkout(skus):
 
 
 
-print(checkout("AAAAA"))
+print(checkout("R"))
