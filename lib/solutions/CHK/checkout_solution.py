@@ -260,7 +260,7 @@ def checkout(skus):
 
             if total // 2 > 0:
                 # print(total)
-                new_price = new_price + 150 * (total // 2)
+                new_price = new_price + 120 * (total // 2)
                 total = total - (2 * (total // 2))
                 # print(total)
 
@@ -399,4 +399,4 @@ def checkout(skus):
 
 
 
-print(checkout(""))
+print(checkout("VVV"))
