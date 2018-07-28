@@ -138,6 +138,16 @@ def checkout(skus):
 
             price = price + product_count["R"][1]
 
+        if prods == "U":
+
+            total = product_count["U"][0]
+
+            if total // 4 > 0:
+
+                product_count["U"] = ((product_count["U"][0] - (total//4)), (product_count["U"][0] - (total//4)) * products["U"])
+
+            price = price + product_count["U"][1]
+
 
     for prods in product_count:
 
@@ -348,4 +358,4 @@ def checkout(skus):
 
 
 
-print(checkout("RRRQQ"))
+print(checkout("UUUU"))
