@@ -102,12 +102,12 @@ def checkout(skus):
 
         if prods == "N":
 
-            total = product_count["E"][0]
-            total_b = product_count["B"][0]
+            total = product_count["N"][0]
+            total_b = product_count["M"][0]
 
-            if total // 3 > 0:
+            if total // 4 > 0:
 
-                total_b = total_b - (total // 3)
+                total_b = total_b - (total // 4)
 
                 print(total_b)
 
@@ -370,4 +370,4 @@ def checkout(skus):
 
 
 
-print(checkout("R"))
+print(checkout("NNNM"))
