@@ -74,28 +74,28 @@ def checkout(skus):
 
     for products in product_count:
 
-        print(products)
+        #print(products)
 
-        # if product_count["A"][0] >= 3:
-        #
-        #     new_price = 0
-        #
-        #     if product_count["A"][0] // 5 >= 0:
-        #
-        #        new_price = 200 * (product_count["A"][0] // 5)
-        #
-        #        if product_count["A"][0] % 5 == 3:
-        #
-        #            new_price = new_price + 130
-        #
-        #        else:
-        #
-        #            new_price = 50 * (product_count["A"][0] % 5)
-        #
-        #     product_count["A"][1] = new_price
+        if product_count["A"][0] >= 3:
+
+            new_price = 0
+
+            if product_count["A"][0] // 5 >= 0:
+
+               new_price = 200 * (product_count["A"][0] // 5)
+
+               if product_count["A"][0] % 5 == 3:
+
+                   new_price = new_price + 130
+
+               else:
+
+                   new_price = 50 * (product_count["A"][0] % 5)
+
+            product_count["A"] = (product_count["A"][0], new_price)
 
 
-        price = price + products[1]
+        price = price + product_count["A"][1]
 
 
 
@@ -162,4 +162,4 @@ def checkout(skus):
 
 
 
-print(checkout("AAAAAABCDEFGH"))
+print(checkout("A"))
