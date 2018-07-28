@@ -100,7 +100,6 @@ def checkout(skus):
 
                 product_count["F"] = ((product_count["F"][0] - (total//3)), (product_count["F"][0] - (total//3)) * products["F"])
 
-            price = price + product_count["F"][1]
 
         if prods == "N":
 
@@ -118,7 +117,6 @@ def checkout(skus):
 
                 product_count["M"] = (total_b, product_count["M"][1])
 
-            price = price + product_count["N"][1]
 
         if prods == "R":
 
@@ -146,7 +144,6 @@ def checkout(skus):
 
                 product_count["U"] = ((product_count["U"][0] - (total//4)), (product_count["U"][0] - (total//4)) * products["U"])
 
-            price = price + product_count["U"][1]
 
 
     for prods in product_count:
@@ -179,8 +176,6 @@ def checkout(skus):
 
             product_count["A"] = (product_count["A"][0], new_price)
 
-            price = price + product_count["A"][1]
-
         if prods == "B":
 
             new_price = 0
@@ -202,8 +197,6 @@ def checkout(skus):
 
 
             product_count["B"] = (product_count["B"][0], new_price)
-
-            price = price + product_count["B"][1]
 
         if prods == "H":
 
@@ -230,8 +223,6 @@ def checkout(skus):
 
             product_count["H"] = (product_count["H"][0], new_price)
 
-            price = price + product_count["H"][1]
-
         if prods == "K":
 
             new_price = 0
@@ -250,8 +241,6 @@ def checkout(skus):
                 new_price = new_price + (total * products["K"])
 
             product_count["K"] = (product_count["K"][0], new_price)
-
-            price = price + product_count["K"][1]
 
         if prods == "P":
 
@@ -272,8 +261,6 @@ def checkout(skus):
 
             product_count["P"] = (product_count["P"][0], new_price)
 
-            price = price + product_count["P"][1]
-
         if prods == "Q":
 
             new_price = 0
@@ -293,8 +280,35 @@ def checkout(skus):
 
             product_count["Q"] = (product_count["Q"][0], new_price)
 
-            price = price + product_count["Q"][1]
+        if prods == "V":
 
+            new_price = 0
+
+            total = product_count["V"][0]
+
+            if total // 3 > 0:
+
+                new_price = new_price + 130 * (total//3)
+                total = total - (3*(total//3))
+
+
+            if total // 2 > 0:
+
+                print(total)
+                new_price = new_price + 90 * (total // 2)
+                total = total - (2*(total//2))
+                print(total)
+
+            if total > 0:
+
+                new_price = new_price + (total * products["V"])
+
+
+            product_count["V"] = (product_count["V"][0], new_price)
+
+    for prods in product_count:
+
+        price = price + product_count[prods][1]
 
     return price
 
@@ -358,4 +372,4 @@ def checkout(skus):
 
 
 
-print(checkout("UUUU"))
+print(checkout("AAAAA"))
