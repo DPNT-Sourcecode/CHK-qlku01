@@ -105,16 +105,16 @@ def checkout(skus):
             total = product_count["N"][0]
             total_b = product_count["M"][0]
 
-            if total // 4 > 0:
+            if total // 3 > 0:
 
-                total_b = total_b - (total // 4)
+                total_b = total_b - (total // 3)
 
                 print(total_b)
 
                 if (total_b < 0):
                     total_b = 0
 
-                product_count["M"] = (total_b, product_count["M"][1])
+                product_count["M"] = (total_b, total_b * products["M"])
 
 
         if prods == "R":
@@ -131,7 +131,7 @@ def checkout(skus):
                 if (total_b < 0):
                     total_b = 0
 
-                product_count["Q"] = (total_b, product_count["Q"][1])
+                product_count["Q"] = (total_b, total_b * products["Q"])
 
 
         if prods == "U":
@@ -370,4 +370,4 @@ def checkout(skus):
 
 
 
-print(checkout("NNNM"))
+print(checkout("NNNNNNMM"))
