@@ -80,9 +80,11 @@ def checkout(skus):
 
         for n in range (0,3):
 
-            print("N = ", n)
+
 
             for j in range(2,5-n):
+
+                print("N = ", n)
 
                 if product_count[group[n]][0] > 0 and product_count[group[n+1]][0] > 0 and product_count[group[n+j]][0] > 0:
 
@@ -399,4 +401,4 @@ def checkout(skus):
 
 
 
-print(checkout("SSS"))
+print(checkout("STXSTX"))
