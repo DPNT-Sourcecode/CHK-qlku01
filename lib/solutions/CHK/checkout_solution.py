@@ -80,15 +80,18 @@ def checkout(skus):
 
             new_price = 0
 
-            print(product_count["A"][0] // 5)
+            division = product_count["A"][0] // 5
 
-            if product_count["A"][0] // 5 >= 0:
+            if division >= 0:
 
-               new_price = 200 * (product_count["A"][0] // 5)
+               print(division)
+
+               new_price = 200 * division
 
                if product_count["A"][0] % 5 == 3:
 
-                   new_price = new_price + 130
+                   #new_price = new_price + 130
+                   pass
 
                else:
 
@@ -97,11 +100,6 @@ def checkout(skus):
             product_count["A"] = (product_count["A"][0], new_price)
 
             price = price + product_count["A"][1]
-
-
-
-
-
 
 
     return price
