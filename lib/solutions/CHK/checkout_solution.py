@@ -124,7 +124,7 @@ def checkout(skus):
 
             product_count["B"] = (product_count["B"][0], new_price)
 
-            price = price + product_count["A"][1]
+            price = price + product_count["B"][1]
 
 
     return price
