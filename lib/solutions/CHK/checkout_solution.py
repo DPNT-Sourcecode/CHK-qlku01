@@ -10,6 +10,8 @@ def checkout(skus):
 
     group = ["S","T","X","Y","Z"]
 
+    used_pairs = []
+
     pairs_found = False
     found = False
 
@@ -101,6 +103,8 @@ def checkout(skus):
                     product_count[group[n+j]] = (product_count[group[n+j]][0] - 1, (product_count[group[n+j]][0] - 1) * products[group[n+j]])
 
                     price = price + 45
+
+                    used_pairs.append((group[n],group[n+1], group[n+j]))
 
                     print("Pair found")
 
