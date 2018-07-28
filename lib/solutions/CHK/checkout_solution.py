@@ -149,7 +149,7 @@ def checkout(skus):
 
     for n in range(0,5):
 
-        if product_count[group[n]] >= 3:
+        if product_count[group[n]][0] >= 3:
             product_count[group[n]] = (product_count[group[n]][0] - 3, (product_count[group[n]][0] - 3) * products[group[n]])
 
             price = price + 45
@@ -454,4 +454,4 @@ def checkout(skus):
 
 
 
-print(checkout(""))
+print(checkout("XXXT"))
