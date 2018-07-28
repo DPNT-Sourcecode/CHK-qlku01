@@ -80,6 +80,10 @@ def checkout(skus):
 
         for n in range (0,3):
 
+            if pairs_found is True:
+                n = 0
+                print("test")
+
             pairs_found = False
 
             for j in range(2,5-n):
@@ -99,11 +103,6 @@ def checkout(skus):
                     print("Pair found")
 
                     pairs_found = True
-
-
-            if pairs_found is True:
-                n = 0
-                print("test")
 
         pairs_found = True
 
@@ -408,4 +407,4 @@ def checkout(skus):
 
 
 
-print(checkout("STXSTX"))
+print(checkout("XTZXTZ"))
