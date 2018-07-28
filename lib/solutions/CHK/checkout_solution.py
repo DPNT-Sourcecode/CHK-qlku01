@@ -84,7 +84,11 @@ def checkout(skus):
 
             for j in range(2,5-n):
 
-                print("J = ", j)
+                if product_count[group[n]][0] > 0 and product_count[group[n+1]][0] > 0 and product_count[group[n+j]][0] > 0:
+
+                    n = 0
+
+                    print("Pair found")
 
         pairs_found = True
 
@@ -389,4 +393,4 @@ def checkout(skus):
 
 
 
-print(checkout("NNNNNNMM"))
+print(checkout("XYZ"))
