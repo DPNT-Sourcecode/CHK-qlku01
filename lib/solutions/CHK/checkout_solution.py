@@ -11,6 +11,7 @@ def checkout(skus):
     group = ["S","T","X","Y","Z"]
 
     pairs_found = False
+    found = False
 
     products["A"] = 50
     products["B"] = 30
@@ -80,6 +81,7 @@ def checkout(skus):
 
         for n in range (0,3):
 
+            n = 0
 
             for j in range(2,5-n):
 
@@ -91,13 +93,12 @@ def checkout(skus):
                     product_count[group[n+1]] = (product_count[group[n+1]][0] - 1, (product_count[group[n+1]][0] - 1) * products[group[n+1]])
                     product_count[group[n+j]] = (product_count[group[n+j]][0] - 1, (product_count[group[n+j]][0] - 1) * products[group[n+j]])
 
-                    n = n - 1
-
                     price = price + 45
 
                     print("Pair found")
 
-                    break
+                    found = True
+
 
 
         pairs_found = True
